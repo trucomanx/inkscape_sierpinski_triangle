@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Sierpinski Triangle</name>
+    <id>org.inkscape.effect.sierpinskitriangle</id>
+    <param name="tab" type="notebook">
+        <page name="Options" gui-text="Options">
+            <param name="fractal_deep"    type="int"   min="0" max="10"  gui-text="Fractal deep:"     default="5"/>
+            <param name="triangle_size"   type="float" min="1" max="500" gui-text="Triangle size (px):" default="100.0"/>
+            <param name="color_in_string" type="color" gui-text="Color" default="#000000"/>
+        </page>
+    </param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="TrucomanX"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command location="inx" interpreter="python">sierpinski_triangle.py</command>
+    </script>
+</inkscape-extension>
+
